@@ -1,14 +1,14 @@
 const EXPRESS = require('express')
 const ROUTER = EXPRESS.Router()
-const { UsersController } = require('./controller')
+const { SalesController } = require('./controller')
 
 module.exports.ProductsAPI = (app) => {
     ROUTER
-        .get('/', UsersController.getUsers)
-        .get('/:id', UsersController.getUser)
-        .post('/', UsersController.createUser)
-        .put('/:id', UsersController.updateUser)
-        .delete('/:id', UsersController.deleteUser)
+        .get('/', SalesController.getUsers)
+        .get('/:id', SalesController.getUser)
+        .post('/', SalesController.createUser)
+        .put('/:id', SalesController.updateUser)
+        .delete('/:id', SalesController.deleteUser)
     
     app.use('/api/products', ROUTER)
 }

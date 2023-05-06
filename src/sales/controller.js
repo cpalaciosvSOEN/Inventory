@@ -4,7 +4,7 @@ const { Response } = require('../common/response')
 const createError = require('http-errors');
 
 
-module.exports.UsersController = {
+module.exports.SalesController = {
     getUsers: async (req, res) => {
         try {
             let users = await UsersService.getAll()
